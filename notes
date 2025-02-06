@@ -1,0 +1,236 @@
+Git credentials - Support for password authentication was removed GitHub - Fixed
+
+You tube link for the above 
+https://www.youtube.com/watch?v=6-FohH_jGLI
+
+
+--->
+
+
+
+so the objective of this lecture is to
+
+take my local repository right here and
+
+to take all these changes and push them
+
+to my remote repository from GitHub for
+
+this what I did before is I added this
+
+as a remote origin so I added this and
+
+now all I have to do is push my changes
+
+but I have a problem as uh you may see
+
+so if I will try to call well git push
+
+I need to call this git push setup
+
+stream origin main okay no
+
+problem I will provide my username and
+
+password and I have this error right
+
+here that tells me that this support for
+
+uh password authentication was removed
+
+well what can I do in this
+
+situation well there are two solutions
+
+to the to this problem and I will show
+
+both of them one is with a personal
+
+access token and the other one is by
+
+logging it logging in with vs code first
+
+of all let's create a personal access
+
+token and let's use that token in order
+
+to authenticate for this I will go to my
+
+GitHub account and I will go to
+
+settings I will go to developer settings
+
+I have the entry personal access tokens
+
+I will select tokens classic and I will
+
+generate a new token
+
+the classic one I will call this token
+
+test I won't set any expiration doesn't
+
+really matter and I will here I will
+
+this token specifies what exactly can I
+
+do with it I will simply basically
+
+select everything I want it to be able
+
+to do everything I will generate this
+
+token and uh now this is my token I will
+
+copy it and paste it to a text
+
+file and now I'm going back to my uh
+
+terminal once again I will clear it and
+
+uh I will do the same get push you know
+
+I will call git push but in order to
+
+save this token to the Persistence of my
+
+computer before calling git push I will
+
+call git config credential helper store
+
+and what this command will do it will
+
+store this token that I will provide and
+
+uh it won't ask for it every time I will
+
+do a git push so I called this and now I
+
+will call git push I will again provide
+
+my username and I will provide as
+
+password I will provide my
+
+token like this and everything is all
+
+right at this point if I will go back to
+
+my uh
+
+repository if I will explore right here
+
+now you can see that I can see my local
+
+test file so what was local inside my
+
+computer now is on the remote host on
+
+GitHub so this was one solution in which
+
+I can authenticate my calls well let me
+
+now show you the other solution and
+
+before showing you the other solution I
+
+will clear this uh token that I
+
+saved and I can clear this token with
+
+the command git config and set
+
+credential Helper and this will remove
+
+my token now if I want to call git push
+
+again again I will be prompted again
+
+with my credentials and I will end up in
+
+the same problem all right so let me
+
+show you another way in which we can
+
+call git push so first of all let me
+
+edit my file all right I will save this
+
+and I will commit this locally first of
+
+all all right I have a new change and
+
+now if I I will want to push I will get
+
+the same error but you we can solve this
+
+problem again in in another way with vs
+
+code so I will open vs code inside this
+
+folder with the command go and code and
+
+uh Dot and now if I go I will go to my
+
+source control I will have the option to
+
+sync my
+
+changes and this time vs code will
+
+prompt me with the message the extension
+
+GitHub wants to sign in using GitHub and
+
+I will allow this I will authorize vs
+
+code and this time my changes if I will
+
+refresh
+
+this my changes now are pushed to the
+
+remote repository but this time with vs
+
+code and the VSS code under the
+
+background will have an O application
+
+this means that anything I will do it
+
+will still be authenticated so I can
+
+still push and pull and uh create
+
+repositories and Cloe them and vs code
+
+or globally git will be authen icated
+
+with my account set by vs code so this
+
+was the other way in which we can
+
+authenticate our GitHub calls with uh vs
+
+code
+
+------------>
+
+Commands to use in Linux window
+
+
+
+[root@developer2-system techconsultantrepo]# git config credential.helper store
+[root@developer2-system techconsultantrepo]# git push --set-upstream origin main
+Username for 'https://github.com': techy-hub
+Password for 'https://techy-hub@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 374 bytes | 374.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/MEBYJUC/techconsultantrepo.git
+   a535491..368fb7d  main -> main
+branch 'main' set up to track 'origin/main'.
+[root@developer2-system techconsultantrepo]#
